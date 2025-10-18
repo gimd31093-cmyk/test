@@ -23,7 +23,7 @@ const Quiz = {
         const data = Quiz.data.find(v => v.idx == idx);
         const text = $(`#quiz-${idx}`).val();
 
-        if (data.correct === text) {
+        if (data.slove === text) {
             $(`.btn_box-${idx}`).html(`<div class="btn">정답!</div>`);
         } else {
             if (data?.include) {
@@ -59,6 +59,7 @@ const Quiz = {
 
 
 $(() => Quiz.init());
+
 
 
 
