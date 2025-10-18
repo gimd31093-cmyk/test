@@ -31,8 +31,10 @@ const Quiz = {
                 return;
             }
 
-            $(`.btn_box-${idx}`).html(`<div class="btn">오답..</div>`);
-            $(`.btn_box-${idx}`).append(`<div class="correct">정답: ${data.slove}</div>`);
+            $(`.btn_box-${idx}`).html(`
+                <div class="btn">오답..</div>
+                <div class="correct">정답: ${data.slove}</div>
+            `);
         }
     },
 
@@ -60,6 +62,7 @@ const Quiz = {
 
 
 $(() => Quiz.init());
+
 
 
 
