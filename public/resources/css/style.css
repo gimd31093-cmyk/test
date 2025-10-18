@@ -108,3 +108,7 @@
 
 }
 
+.container .box .quiz_box .middle .btn_box {
+    display:flex;
+    align-items: center;
+}
