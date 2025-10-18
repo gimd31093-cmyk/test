@@ -36,10 +36,10 @@ const Quiz = {
     },
 
     start() {
-        $(`.middle`).html(Quiz.data.map(v => {
+        $(`.middle`).html(Quiz.data.map((v, i) => {
             return `
                 <div class="item item-${v.idx}" data-idx="${v.idx}">
-                    <h2 class="title">${(v.idx + 1 + "").padStart(2, "0")}. ${v.slove}</h2>
+                    <h2 class="title">${(i + 1 + "").padStart(2, "0")}. ${v.slove}</h2>
 
                     <input type="text" id="quiz-${v.idx}" placeholder="답을 입력해주세요.">
 
@@ -59,5 +59,6 @@ const Quiz = {
 
 
 $(() => Quiz.init());
+
 
 
