@@ -19,7 +19,7 @@ const Quiz = {
     },
 
     submit(e) {
-        const idx = $(e.target).parents("item").data("idx");
+        const idx = $(e.target).parents(".item").data("idx");
         const data = Quiz.data.find(v => v.idx == idx);
         const text = $(`#quiz-${idx}`).val();
 
@@ -59,6 +59,7 @@ const Quiz = {
 
 
 $(() => Quiz.init());
+
 
 
 
