@@ -27,8 +27,7 @@ const Quiz = {
             $(`.btn_box-${idx}`).html(`<div class="btn">정답!</div>`);
         } else {
             if (data?.include) {
-                if (data.slove.split(",").every(v => text.includes(v))) $(`.btn_box-${idx}`).html(`<div class="btn">정답!</div>`);
-                return;
+                if (data.slove.split(",").every(v => text.includes(v))) return $(`.btn_box-${idx}`).html(`<div class="btn">정답!</div>`);
             }
 
             $(`.btn_box-${idx}`).html(`
@@ -62,6 +61,7 @@ const Quiz = {
 
 
 $(() => Quiz.init());
+
 
 
 
