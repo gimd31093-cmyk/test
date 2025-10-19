@@ -23,7 +23,7 @@ const Quiz = {
         const data = Quiz.data.find(v => v.idx == idx);
         const text = $(`#quiz-${idx}`).val();
 
-        if (data.slove === text) {
+        if (!data?.include && data.slove === text) {
             $(`.btn_box-${idx}`).html(`<div class="btn">정답!</div>`);
         } else {
             if (data?.include) {
@@ -33,7 +33,7 @@ const Quiz = {
 
             $(`.btn_box-${idx}`).html(`
                 <div class="btn">오답..</div>
-                <div class="correct">정답: ${data.slove}</div>
+                <div class="correct">정답: ${data?.include ? "행성의 공전 주기의 제곱은 타원 궤도 긴반지름의 세제곱에 비례한다." : data.slove}</div>
             `);
         }
     },
@@ -62,6 +62,7 @@ const Quiz = {
 
 
 $(() => Quiz.init());
+
 
 
 
